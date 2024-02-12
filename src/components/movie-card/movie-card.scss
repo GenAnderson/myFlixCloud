@@ -1,0 +1,23 @@
+.card {
+  box-shadow: 0.1rem 0.2rem 0.4rem rgb(5, 5, 5);
+
+  a {
+    color: black;
+  }
+  &-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+  }
+  &-img-top {
+    width: 100%;
+    height: 13vw;
+    object-fit: cover;
+
+    @media (max-width: 780px) {
+      height: 40vw;
+    }
+  }
+}

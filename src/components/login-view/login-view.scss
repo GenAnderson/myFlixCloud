@@ -1,0 +1,21 @@
+.login_form {
+  color: white;
+  display: inline-block;
+  transform: translateY(10%);
+}
+.login_logo {
+  display: block;
+  width: 80%;
+  border-radius: 5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.login_text {
+  font-weight: bold;
+  margin: 10px 0px;
+}
+
+.flex-apart {
+  display: flex;
+  justify-content: space-between;
+}

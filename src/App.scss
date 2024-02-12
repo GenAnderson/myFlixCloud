@@ -1,10 +1,33 @@
-.App {
-  text-align: center;
+// .App {
+//   text-align: center;
+// }
+
+.sign-in-page {
+  height: 100vh;
+  background-image: url("../public/loginbg.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.movies-container {
+  background-color: #353b41;
+  width: 100vw;
+}
+
+.movies-list {
+  padding: 0px 30px;
+}
+
+.movie-view-container {
+  height: 100vh;
+  background-color: #282c34;
 }
 
 @media (prefers-reduced-motion: no-preference) {

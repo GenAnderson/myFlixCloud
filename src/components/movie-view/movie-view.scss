@@ -1,0 +1,44 @@
+.movie-view {
+  padding: 2rem;
+  margin: 2rem;
+
+  border: solid 2px black;
+  border-radius: 2%;
+  box-shadow: 0.1rem 0.3rem 0.5rem rgb(14, 14, 14);
+  background-color: #bec7d1;
+  &--title {
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem 0rem;
+  }
+  &--directorBox {
+    border-top: 0.1rem solid darkgray;
+  }
+  &--genreBox {
+    border-top: 0.1rem solid darkgray;
+  }
+  img {
+    width: 100%;
+    box-shadow: 0.1rem 0.3rem 0.5rem gray;
+  }
+  &--footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0rem;
+  }
+}
+
+.upload-file-container {
+  border-top: 0.1rem solid darkgray;
+
+  text-align: center;
+  input {
+    border: 1px solid black;
+    align-self: center;
+  }
+}
+
+.btn-flex {
+  display: flex;
+  justify-content: space-between;
+}

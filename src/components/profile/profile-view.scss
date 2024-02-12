@@ -1,0 +1,26 @@
+.profile-view-bg {
+  background-color: #353b41;
+  height: 100vh;
+  color: rgb(206, 203, 203);
+}
+
+.profileView {
+  &--container {
+    .form-label {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &--heading {
+    font-size: 2rem;
+    font-weight: bold;
+    padding-top: 1rem;
+    text-align: center;
+  }
+
+  &--btnsContainer {
+    display: flex;
+    justify-content: space-between;
+  }
+}
