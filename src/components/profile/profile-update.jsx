@@ -22,10 +22,10 @@ export const ProfileUpdate = ({ user, token }) => {
       FavoriteMovies: favoriteMovies,
     };
 
-    // const instanceEndpoint="test"
+    const instanceEndpoint = "ec2-3-94-167-32.compute-1.amazonaws.com";
 
-    fetch(`https://movieapi-yazx.onrender.com/users/${user.Username}`, {
-    // fetch(`https://${instanceEndpoint}/users/${user.Username}`, {
+    // fetch(`https://movieapi-yazx.onrender.com/users/${user.Username}`, {
+    fetch(`https://${instanceEndpoint}/users/${user.Username}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

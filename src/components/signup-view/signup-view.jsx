@@ -21,10 +21,10 @@ export const SignUpView = () => {
       Birthday: birthday,
     };
 
-    // const instanceEndpoint = "test"
+    const instanceEndpoint = "ec2-3-94-167-32.compute-1.amazonaws.com";
 
-    fetch("https://movieapi-yazx.onrender.com/users/", {
-      // fetch(`https://${instanceEndpoint}/users/`, {
+    // fetch("https://movieapi-yazx.onrender.com/users/", {
+    fetch(`https://${instanceEndpoint}/users/`, {
       method: "POST",
       body: JSON.stringify(data),
       headers: {

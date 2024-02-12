@@ -20,10 +20,10 @@ export const LoginView = ({ onLoggedIn }) => {
      * Change CORs on movie API if site doesn't have permission
      *   */
 
-    // const instanceEndpoint = "test";
+    const instanceEndpoint = "ec2-3-94-167-32.compute-1.amazonaws.com";
 
-    fetch("https://movieapi-yazx.onrender.com/login", {
-      // fetch(`https://${instanceEndpoint}/login`, {
+    // fetch("https://movieapi-yazx.onrender.com/login", {
+    fetch(`https://${instanceEndpoint}/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
