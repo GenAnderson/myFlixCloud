@@ -1,0 +1,13 @@
+.upload-file-container {
+  padding-top: 2rem;
+  input {
+    align-self: center;
+  }
+}
+
+.uploaded-images {
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+  margin: 0.2rem;
+}

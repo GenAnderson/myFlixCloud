@@ -3,11 +3,10 @@ import { Button } from "react-bootstrap";
 export const DeleteProfile = ({ user, onLoggedOut }) => {
   const storedToken = localStorage.getItem("token");
 
-  const instanceEndpoint = "ec2-3-94-167-32.compute-1.amazonaws.com";
+  const instanceEndpoint = "localhost:8080";
 
   const deleteProfileHandler = () => {
-    // fetch(`https://movieapi-yazx.onrender.com/users/${user.Username}`, {
-    fetch(`https://${instanceEndpoint}/users/${user.Username}`, {
+    fetch(`http://${instanceEndpoint}/users/${user.Username}`, {
       method: "DELETE",
       headers: { Authorization: `Bearer ${storedToken}` },
     })

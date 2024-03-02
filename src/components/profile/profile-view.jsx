@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Row, Col, Form, Button, Container } from "react-bootstrap";
 import { ViewFavorites } from "../favorites/view-favorites";
 import { DeleteProfile } from "./profile-delete";
+import { ImageUpload } from "../upload-image/upload-image";
 
 import "./profile-view.scss";
 
@@ -12,7 +13,7 @@ export const ProfileView = ({ user, movies, updateUser, onLoggedOut }) => {
   return (
     <Container className="profile-view-bg gx-0">
       <p className="profileView--heading">My Profile</p>
-      <Row className="gx-0 px-5">
+      <Row className="gx-0 px-5 py-5">
         <Col md={8} className="px-5">
           <div className="profileView--container">
             <Form>
@@ -51,6 +52,9 @@ export const ProfileView = ({ user, movies, updateUser, onLoggedOut }) => {
               </Link>
             </div>
           </div>
+          <Col>
+            <ImageUpload />
+          </Col>
         </Col>
 
         <Col>

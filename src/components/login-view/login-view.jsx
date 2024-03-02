@@ -20,17 +20,21 @@ export const LoginView = ({ onLoggedIn }) => {
      * Change CORs on movie API if site doesn't have permission
      *   */
 
-    const instanceEndpoint = "ec2-3-94-167-32.compute-1.amazonaws.com";
+    const instanceEndpoint = "localhost:8080";
 
-    // fetch("https://movieapi-yazx.onrender.com/login", {
-    fetch(`https://${instanceEndpoint}/login`, {
+    fetch(`http://${instanceEndpoint}/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
     })
-      .then((response) => response.json())
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+      })
       .then((data) => {
         console.log("Login response: ", data);
         if (data.user) {
@@ -41,8 +45,9 @@ export const LoginView = ({ onLoggedIn }) => {
           alert("No such user");
         }
       })
-      .catch((e) => {
-        alert("Something went wrong");
+      .catch((error) => {
+        console.error("Error:", error.message);
+        alert("Something went wrong. Please try again later.");
       });
   };
 

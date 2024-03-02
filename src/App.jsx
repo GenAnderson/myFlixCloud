@@ -29,17 +29,19 @@ export const App = () => {
 
   useEffect(() => {
     const filteredMovies = movies.filter((movie) => {
-      return movie.Title.toLocaleLowerCase().includes(movieTitle);
+      return movie.Title.toLowerCase().includes(movieTitle);
     });
     setUpdatedMovies(filteredMovies);
   }, [movieTitle]);
   // filter info end //
 
+  const instanceEndpoint = "localhost:8080";
+
   useEffect(() => {
     if (!token) {
       return;
     }
-    fetch("https://movieapi-yazx.onrender.com/movies", {
+    fetch(`http://${instanceEndpoint}/movies`, {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then((response) => response.json())
@@ -59,16 +61,20 @@ export const App = () => {
         });
         setMovies(moviesFromApi);
         setUpdatedMovies(moviesFromApi);
+      })
+      .catch((error) => {
+        console.error("error from backend:", error);
       });
   }, [token]);
 
   const updateUser = () => {
-    fetch(`https://movieapi-yazx.onrender.com/users/${user.Username}`, {
-      method: "GET",
+    fetch(`http://${instanceEndpoint}/users/${user.Username}`, {
+      method: "get",
       headers: { Authorization: `Bearer ${token}` },
     })
       .then((response) => response.json())
       .then((user) => {
+        console.log(user);
         setUser(user);
       })
       .catch((error) => {

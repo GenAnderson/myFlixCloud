@@ -9,12 +9,11 @@ export const DeleteFavorite = ({ movieId, updateUser }) => {
     deleteFavoriteHandler();
   };
 
-  const instanceEndpoint = "ec2-3-94-167-32.compute-1.amazonaws.com";
+  const instanceEndpoint = "localhost:8080";
 
   const deleteFavoriteHandler = () => {
     fetch(
-      // `https://movieapi-yazx.onrender.com/users/${storedUser.Username}/movies/${movieId}`,
-      `https://${instanceEndpoint}/users/${storedUser.Username}/movies/${movieId}`,
+      `http://${instanceEndpoint}/users/${storedUser.Username}/movies/${movieId}`,
       {
         method: "DELETE",
         headers: { Authorization: `Bearer ${storedToken}` },

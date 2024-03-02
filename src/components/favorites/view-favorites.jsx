@@ -14,7 +14,12 @@ export const ViewFavorites = ({ user, FavoriteMovies, movies, updateUser }) => {
           {favorites.map((movie) => (
             <Col className="my-2">
               <li key={movie.id}>
-                <MovieCard movie={movie} user={user} updateUser={updateUser} />
+                <MovieCard
+                  movie={movie}
+                  user={user}
+                  updateUser={updateUser}
+                  key={movie.name}
+                />
               </li>
             </Col>
           ))}

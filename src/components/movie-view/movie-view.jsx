@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import { AddFavorite } from "../favorites/add-favorite";
 import { DeleteFavorite } from "../favorites/delete-favorite";
-import { ImageUpload } from "../upload-image/upload-image";
 
 import "./movie-view.scss";
 
@@ -46,7 +45,6 @@ export const MovieView = ({ movies, updateUser, user }) => {
           <AddFavorite movieId={movie.id} updateUser={updateUser} />
         )}
       </div>
-      <ImageUpload />
     </div>
   );
 };
